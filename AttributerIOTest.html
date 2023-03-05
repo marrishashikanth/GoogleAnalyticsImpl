@@ -8,7 +8,7 @@
     <script language="text/javascript" type="text/javascript">
 
         var onSubmit1 = function() {
-            alert('hi');
+            alert('Please check console for the attribution details');
             let attributer_channel = document.getElementById('channel').value;
             let attributer_channeldrilldown1 = document.getElementById('channeldrilldown1').value;
             let attributer_channeldrilldown2 = document.getElementById('channeldrilldown2').value;
@@ -32,22 +32,22 @@
     </script>
 </head>
 <body>
+    <form id="form1">
 
+        <input type="hidden" id="channel" name="channel" value="[channel]">
+        <input type="hidden" id="channeldrilldown1" name="channeldrilldown1" value="[channeldrilldown1]">
+        <input type="hidden" id="channeldrilldown2" name="channeldrilldown2" value="[channeldrilldown2]">
+        <input type="hidden" id="channeldrilldown3" name="channeldrilldown3" value="[channeldrilldown3]">
+        <input type="hidden" id="channeldrilldown4" name="channeldrilldown4" value="[channeldrilldown4]">
+        <input type="hidden" id="landingpage" name="landingpage" value="[landingpage]">
+        <input type="hidden" id="landingpagegroup" name="landingpagegroup" value="[landingpagegroup]">
 
-    <input type="hidden" id="channel" name="channel" value="[channel]">
-    <input type="hidden" id="channeldrilldown1" name="channeldrilldown1" value="[channeldrilldown1]">
-    <input type="hidden" id="channeldrilldown2" name="channeldrilldown2" value="[channeldrilldown2]">
-    <input type="hidden" id="channeldrilldown3" name="channeldrilldown3" value="[channeldrilldown3]">
-    <input type="hidden" id="channeldrilldown4" name="channeldrilldown4" value="[channeldrilldown4]">
-    <input type="hidden" id="landingpage" name="landingpage" value="[landingpage]">
-    <input type="hidden" id="landingpagegroup" name="landingpagegroup" value="[landingpagegroup]">
-
-    <button id="submitButton" onclick="return onSubmit1();">Submit</button>
-
-    <script language="text/javascript">
+        <button id="submitButton" onclick="return onSubmit1();">Submit</button>
+    </form>
+    <!--<script language="text/javascript">
 
         document.getElementById("submitButton").addEventListener("click", onSubmit1, false);
-    </script>
+    </script>-->
 
 </body>
 
