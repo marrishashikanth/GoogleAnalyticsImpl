@@ -5,14 +5,46 @@
     <meta charset="utf-8" />
     <title></title>
     <script type="text/javascript" src="https://d1b3llzbo1rqxo.cloudfront.net/attributer.js"></script>
+    <script language="text/javascript">
+
+        function onSubmit1() {
+            alert('hi');
+            let attributer_channel = document.getElementById('channel').value;
+            let attributer_channeldrilldown1 = document.getElementById('channeldrilldown1').value;
+            let attributer_channeldrilldown2 = document.getElementById('channeldrilldown2').value;
+            let attributer_channeldrilldown3 = document.getElementById('channeldrilldown3').value;
+            let attributer_channeldrilldown4 = document.getElementById('channeldrilldown4').value;
+            let attributer_landingpage = document.getElementById('landingpage').value;
+            let attributer_landingpagegroup = document.getElementById('landingpagegroup').value;
+
+            console.log('attributer_channel', attributer_channel);
+            console.log('attributer_channeldrilldown1', attributer_channeldrilldown1);
+            console.log('attributer_channeldrilldown2', attributer_channeldrilldown2);
+            console.log('attributer_channeldrilldown3', attributer_channeldrilldown3);
+            console.log('attributer_channeldrilldown4', attributer_channeldrilldown4);
+            console.log('attributer_landingpage', attributer_landingpage);
+            console.log('attributer_landingpagegroup', attributer_landingpagegroup);
+
+            return false;
+        }
+    </script>
 </head>
 <body>
-    <input type="hidden" id="[attributer-channel]" name="[attributer-channel]" value="[channel]">
-    <input type="hidden" id="[attributer-channeldrilldown1]" name="[attributer-channeldrilldown1]" value="[channeldrilldown1]">
-    <input type="hidden" id="[attributer-channeldrilldown2]" name="[attributer-channeldrilldown2]" value="[channeldrilldown2]">
-    <input type="hidden" id="[attributer-channeldrilldown3]" name="[attributer-channeldrilldown3]" value="[channeldrilldown3]">
-    <input type="hidden" id="[attributer-channeldrilldown4]" name="[attributer-channeldrilldown4]" value="[channeldrilldown4]">
-    <input type="hidden" id="[attributer-landingpage]" name="[attributer-landingpage]" value="[landingpage]">
-    <input type="hidden" id="[attributer-landingpagegroup]" name="[attributer-landingpagegroup]" value="[landingpagegroup]">
+
+
+    <input type="hidden" id="channel" name="channel" value="[channel]">
+    <input type="hidden" id="channeldrilldown1" name="channeldrilldown1" value="[channeldrilldown1]">
+    <input type="hidden" id="channeldrilldown2" name="channeldrilldown2" value="[channeldrilldown2]">
+    <input type="hidden" id="channeldrilldown3" name="channeldrilldown3" value="[channeldrilldown3]">
+    <input type="hidden" id="channeldrilldown4" name="channeldrilldown4" value="[channeldrilldown4]">
+    <input type="hidden" id="landingpage" name="landingpage" value="[landingpage]">
+    <input type="hidden" id="landingpagegroup" name="landingpagegroup" value="[landingpagegroup]">
+
+    <input type="submit" onclick="onSubmit1();" value="Submit" />
+
+    
+
 </body>
+
+
 </html>
