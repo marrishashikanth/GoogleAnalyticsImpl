@@ -33,10 +33,22 @@
     function onSendtoGAButtonClick() {
         //document.getElementById("demo").innerHTML = Date();
         alert('onSendtoGAButtonClick');
+        window.dataLayer.push({
+            "event": "customButtonClick",
+            "data": {
+                "name": "Button Click"
+            }
+        });
     }
 
     function onSendtoGACheckboxChange() {
         alert('onSendtoGACheckboxChange');
+        window.dataLayer.push({
+            "event": "customCheckboxChange",
+            "data": {
+                "name": "Checkbox Change"
+            }
+        });
     }
 </script>
 
