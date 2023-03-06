@@ -35,9 +35,7 @@
         alert('onSendtoGAButtonClick');
         window.dataLayer.push({
             "event": "customButtonClick",
-            "data": {
-                "name": "Button Click"
-            }
+            "eventData":"Button Click"
         });
     }
 
@@ -45,9 +43,7 @@
         alert('onSendtoGACheckboxChange');
         window.dataLayer.push({
             "event": "customCheckboxChange",
-            "data": {
-                "name": "Checkbox Change"
-            }
+            "eventData": "Checkbox Change"
         });
     }
 </script>
