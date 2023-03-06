@@ -22,7 +22,7 @@
         </tr>
         <tr>
             <td><input type="text" id="txtBox2" /></td>
-            <td><input type="checkbox" onchange="onSendtoGACheckboxChange()" />Send to GA</td>
+            <td><input type="checkbox" id="chkGA" onchange="onSendtoGACheckboxChange()" />Send to GA</td>
         </tr>
     </table>
 
@@ -32,19 +32,32 @@
 <script language="javascript">
     function onSendtoGAButtonClick() {
         //document.getElementById("demo").innerHTML = Date();
-        alert('onSendtoGAButtonClick');
+        console.log('onSendtoGAButtonClick');
+
+        let txtValue = document.getElementById('txtBox1').value;
+        console.log('txtBox1 val -- ', txtValue);
+
         window.dataLayer.push({
             "event": "customButtonClick",
-            "eventData":"Button Click"
+            "eventData": txtValue
         });
     }
 
     function onSendtoGACheckboxChange() {
-        alert('onSendtoGACheckboxChange');
-        window.dataLayer.push({
-            "event": "customCheckboxChange",
-            "eventData": "Checkbox Change"
-        });
+        
+        let txtValue = document.getElementById('txtBox2').value;
+        let isChecked = document.getElementById('chkGA').checked;
+
+        console.log('onSendtoGACheckboxChange');
+        console.log('txtBox2 val -- ', txtValue);
+        console.log('chkGA checked -- ', isChecked);
+
+        if (isChecked) {
+            window.dataLayer.push({
+                "event": "customCheckboxChange",
+                "eventData": txtValue
+            });
+        }
     }
 </script>
 
