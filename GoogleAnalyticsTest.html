@@ -40,9 +40,13 @@
         let txtValue = document.getElementById('txtBox1').value;
         console.log('txtBox1 val -- ', txtValue);
 
-        window.dataLayer.push({
-            "event": "custom_button_click",
-            "eventData": txtValue
+        //window.dataLayer.push({
+        //    "event": "custom_button_click",
+        //    "eventData": txtValue
+        //});
+
+        gtag('event', 'custom_button_click', {
+            'eventData': txtValue
         });
     }
 
@@ -56,9 +60,12 @@
         console.log('chkGA checked -- ', isChecked);
 
         if (isChecked) {
-            window.dataLayer.push({
-                "event": "custom_checkbox_change",
-                "eventData": txtValue
+            //window.dataLayer.push({
+            //    "event": "custom_checkbox_change",
+            //    "eventData": txtValue
+            //});
+            gtag('event', 'custom_checkbox_change', {
+                'eventData': txtValue
             });
         }
     }
