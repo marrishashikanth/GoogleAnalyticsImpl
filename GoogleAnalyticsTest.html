@@ -45,8 +45,14 @@
         //    "eventData": txtValue
         //});
 
+       
+        let datetime = getCurrentDateTime();
+        let userId = getUserId();
+
         gtag('event', 'custom_button_click', {
-            'eventData': txtValue
+            'eventData': txtValue,
+            'eventDateTime': datetime,
+            'UserId': userId
         });
     }
 
@@ -58,6 +64,9 @@
         console.log('onSendtoGACheckboxChange');
         console.log('txtBox2 val -- ', txtValue);
         console.log('chkGA checked -- ', isChecked);
+       
+        let userId = getUserId();
+        let datetime = getCurrentDateTime();
 
         if (isChecked) {
             //window.dataLayer.push({
@@ -65,9 +74,29 @@
             //    "eventData": txtValue
             //});
             gtag('event', 'custom_checkbox_change', {
-                'eventData': txtValue
+                'eventData': txtValue,
+                'eventDateTime': datetime,
+                'UserId': userId
             });
         }
+    }
+
+    function getCurrentDateTime() {
+        let currentdate = new Date();
+        let datetime = currentdate.getDate() + "/"
+            + (currentdate.getMonth() + 1) + "/"
+            + currentdate.getFullYear() + " @ "
+            + currentdate.getHours() + ":"
+            + currentdate.getMinutes() + ":"
+            + currentdate.getSeconds();
+
+        return datetime;
+    }
+
+    function getUserId() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        return urlParams.get('UserId');
     }
 </script>
 
